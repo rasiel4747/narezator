@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  «: *default
+  database: narezator_development
+
+test:
+  «: *default
+  database: narezator_test
+
+production:
+  «: *default
+  database: narezator_production
+  username: ibeere
+  password: <%= ENV['IBEERE_DATABASE_PASSWORD'] %>
