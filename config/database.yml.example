@@ -18,4 +18,4 @@ production:
   <<: *default
   database: narezator_production
   username: ibeere
-  password: <%= ENV['IBEERE_DATABASE_PASSWORD'] %>
+  password: <%= ENV['NAREZATOR_DATABASE_PASSWORD'] %>
